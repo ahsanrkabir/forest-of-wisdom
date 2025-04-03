@@ -4,6 +4,7 @@ import { PT_Sans } from "next/font/google";
 
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
+import ThemeProvider from "@/context/Theme";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -29,13 +30,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${nunito.className} ${ptSans.variable} relative antialiased`}
       >
-        <div className="texture" />
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="texture" />
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
