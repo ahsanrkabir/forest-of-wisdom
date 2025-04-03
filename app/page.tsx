@@ -1,7 +1,5 @@
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-3xl">Homepage</h1>
-    </div>
+    <h1 className="text-3xl">Welcome to the forest of wisdom. cozy up.</h1>
   );
 }

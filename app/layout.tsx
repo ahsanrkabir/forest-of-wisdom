@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { PT_Sans } from "next/font/google";
+
 import Navbar from "@/components/shared/Navbar";
 import "./globals.css";
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} ${ptSans.variable} antialiased relative`}
+        className={`${nunito.className} ${ptSans.variable} relative antialiased`}
       >
         <div className="texture" />
         <Navbar />
