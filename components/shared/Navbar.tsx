@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav>
       <Link href="/" className="flex items-end gap-1">
         <Image src="/forest.png" alt="logo" width={40} height={40} />
-        <p className="h2-bold">Forest of Wisdom</p>
+        <p className="h2-bold font-pt-sans">Forest of Wisdom</p>
       </Link>
     </nav>
   );
